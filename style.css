@@ -1,31 +1,39 @@
 /* Resets */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   min-height: 100vh;
   background: rgba(14, 13, 20, 0.849);
-  font-family: 'Ubuntu', sans-serif;
-  background: url('./test.png') no-repeat;
+  font-family: "Ubuntu", sans-serif;
+  background: url("./assets/bg.png") no-repeat;
   background-size: cover;
   background-position: 50% 35%;
 }
+button {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+input {
+  outline: none;
+}
 /* Container */
-.container{
+.container {
   display: none;
 }
-.container.search-show{
+.container.search-show {
   display: initial;
   z-index: 10;
   position: absolute;
   top: 0;
   width: 100%;
   min-height: 100vh;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
 }
 .search {
   display: none;
@@ -39,36 +47,41 @@ html, body {
   position: relative;
   margin: 20px auto;
 }
-.search input{
+.search input {
   width: 100%;
   padding: 10px 10px 10px 35px;
   border-radius: 8px;
   border: none;
-  background-color:rgb(218, 218, 218, 0.2);
-  color: #fff;
+  background-color: rgb(218, 218, 218, 0.2);
+  color: #141414;
 }
-.search input:focus{
-  background-color:rgb(218, 218, 218, 0.4);
+.search input::placeholder {
+  color: #272323d3;
 }
 
-.search svg{
+.search input:focus {
+  background-color: rgb(218, 218, 218, 0.4);
+  color: #141414;
+}
+
+.search svg {
   position: absolute;
   left: 10px;
   width: 16px;
   height: 16px;
-  color:#fff;
+  color: #fff;
 }
 
 /* Header */
 header {
   width: 100vw;
   color: #fff;
-  background: rgba(0,0,0,0.18);
-  transition: background .2s ease-out;
+  background: rgba(0, 0, 0, 0.18);
+  transition: background 0.2s ease-out;
 }
 
 header.search-show {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 header nav {
@@ -93,7 +106,6 @@ header nav div:nth-child(3) {
   display: flex;
   justify-content: flex-end;
   align-content: center;
-
 }
 
 header svg {
@@ -101,7 +113,7 @@ header svg {
   cursor: pointer;
 }
 
-header nav .logo{
+header nav .logo {
   width: max-content;
   background: transparent;
   border: none;
@@ -110,12 +122,12 @@ header nav .logo{
   border-radius: 4px;
   padding: 10px;
 }
-header nav .logo img{
+header nav .logo img {
   height: 25px;
   filter: invert();
 }
-header nav .logo:hover{
-  background: rgba(255,255,255,0.3);
+header nav .logo:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 header nav .config {
   cursor: pointer;
@@ -130,7 +142,7 @@ header nav .config button {
   padding: 10px;
 }
 
-header nav .config button svg{
+header nav .config button svg {
   margin-right: 5px;
 }
 
@@ -139,11 +151,11 @@ header nav .config button svg {
   height: 18px;
   margin-left: 14px;
 }
-header nav .config button:hover{
-  background: rgba(255,255,255,0.3);
+header nav .config button:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
-header nav .date-time span{
+header nav .date-time span {
   background: transparent;
   border: none;
   display: flex;
@@ -152,15 +164,15 @@ header nav .date-time span{
   cursor: pointer;
   padding: 10px;
 }
-header nav .date-time span:hover{
-  background:rgba(255,255,255,0.3); 
+header nav .date-time span:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* Pop-up config */
-header nav .pop-up{
+header nav .pop-up {
   display: none;
 }
-header nav .pop-up.show{
+header nav .pop-up.show {
   display: initial;
   position: absolute;
   width: 300px;
@@ -170,12 +182,12 @@ header nav .pop-up.show{
   top: 44px;
   border-radius: 4px;
 }
-header nav .pop-up svg{
+header nav .pop-up svg {
   width: 18px;
   height: 18px;
 }
 
-header nav .pop-up .content{
+header nav .pop-up .content {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -184,7 +196,7 @@ header nav .pop-up .content{
   padding: 10px 20px;
 }
 
-header nav .pop-up .content .input-group{
+header nav .pop-up .content .input-group {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -192,26 +204,28 @@ header nav .pop-up .content .input-group{
   padding: 5px 10px;
   border-radius: 8px;
   opacity: 0.6;
-  transition: opacity .2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
-header nav .pop-up .content .input-group input{
+header nav .pop-up .content .input-group input {
   width: 90%;
   -moz-appearance: none;
+  -webkit-appearance: none;
   appearance: none;
   width: 90%;
   height: 20px;
   background: #8a8989;
   outline: none;
   opacity: 0.7;
-  transition: opacity .2s ease-out;
+  transition: opacity 0.2s ease-out;
   border-radius: 8px;
 }
 
-header nav .pop-up .content .input-group input:hover{
+header nav .pop-up .content .input-group input:hover {
   opacity: 1;
 }
 
-header nav .pop-up .content .input-group input::-webkit-slider-thumb{
+header nav .pop-up .content .input-group input::-webkit-slider-thumb {
+  -webkit-appearance: none;
   width: 25px;
   height: 25px;
   background: #fff;
@@ -229,7 +243,7 @@ header nav .pop-up .content .input-group input::-moz-range-thumb {
   cursor: pointer;
 }
 
-header nav .pop-up .content .connection{
+header nav .pop-up .content .connection {
   margin-top: 20px;
   padding: 5px 10px;
   border-radius: 8px;
@@ -239,18 +253,17 @@ header nav .pop-up .content .connection{
   justify-content: space-between;
   align-items: center;
   opacity: 0.6;
-  transition: opacity .2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 
-header nav .pop-up .content .options{
+header nav .pop-up .content .options {
   margin-top: 20px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
- 
 }
 
-header nav .pop-up .content .options > div{
+header nav .pop-up .content .options > div {
   margin-top: 6px;
   padding: 5px 10px;
   border-radius: 8px;
@@ -260,22 +273,21 @@ header nav .pop-up .content .options > div{
   justify-content: flex-start;
   align-items: center;
   opacity: 0.6;
-  transition: opacity .2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
-header nav .pop-up .content .options > div > svg{
+header nav .pop-up .content .options > div > svg {
   margin-right: 8px;
 }
 
 header nav .pop-up .content .input-group:hover,
 header nav .pop-up .content .connection:hover,
-header nav .pop-up .content .options > div:hover{
+header nav .pop-up .content .options > div:hover {
   background: rgb(42, 97, 248);
   opacity: 1;
 }
 
-
 /* Footer (Docs) */
-footer{
+footer {
   z-index: 15;
   position: absolute;
   width: 100%;
@@ -287,7 +299,7 @@ footer{
 }
 footer ul {
   transform: translateY(60px);
-  transition: transform .2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  transition: transform 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
   display: initial;
   width: 100%;
   margin: 0 auto;
@@ -297,7 +309,7 @@ footer ul {
   padding: 10px;
 }
 
-footer ul li{
+footer ul li {
   list-style: none;
   margin-right: 20px;
   cursor: pointer;
@@ -305,27 +317,27 @@ footer ul li{
   height: 40px;
   object-fit: cover;
   overflow: hidden;
-  transition: transform .18s ease-out;
+  transition: transform 0.18s ease-out;
 }
 
 footer ul li:hover {
   transform: scale(1.12) rotate(-2deg);
 }
 
-footer ul li img{
+footer ul li img {
   width: 100%;
   height: 100%;
 }
 
-footer ul li.menu{
+footer ul li.menu {
   filter: invert();
 }
 
 /* Desktop */
-div.desktop.hidden{
+div.desktop.hidden {
   display: none;
 }
-div.desktop{
+div.desktop {
   margin: 30px 20px;
   display: grid;
   grid-template-columns: 40px;
