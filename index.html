@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MacOS Clone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet"> 
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./mac-logo.png" alt="">
+      </div>
+      <div class="date-time">
+        <span class="clock"></span>
+      </div>
+      <div class="config">
+        <button>
+          <i data-feather="link-2"></i>
+          <i data-feather="volume-2"></i>
+          <i data-feather="power"></i>
+        </button>
+      </div>
+      <div class="pop-up">
+        <div class="content">
+          <div class="input-group">
+            <i data-feather="volume-2"></i>
+            <input type="range" >
+          </div>
+          <div class="input-group">
+            <i data-feather="sun"></i>
+            <input type="range" >
+          </div>
+          <div class="connection">
+            <i data-feather="code"></i>
+            Conexão
+            <i data-feather="chevron-right"></i>
+          </div>
+          <div class="options">
+            <div class="settings">
+              <i data-feather="settings"></i>
+              Configurações
+            </div>
+            <div class="lock">
+              <i data-feather="lock"></i>
+              Bloquear
+            </div>
+            <div class="power">
+              <i data-feather="power"></i>
+              Desligar / encerrar sessão 
+              <i data-feather="chevron-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="desktop">
+    <div class="item">
+      <img src="./google-docs.png" alt="">
+    </div>
+    <div class="item">
+      <img src="./telegram.png" alt="">
+    </div>
+    <div class="item">
+      <img src="./youtube.png" alt="">
+    </div>
+    <div class="item">
+      <img src="./App-Store.png" alt="">
+    </div>
+    <div class="item">
+      <img src="./apple-music.png" alt="">
+    </div>
+
+  </div>
+
+  <footer>
+    <ul>
+      <li>
+        <img src="./arquivos.png" alt="Arquivos">
+      </li>
+      <li>
+        <img src="./mozila.png" alt="Arquivos">
+      </li>
+      <li>
+        <img src="./vscode.png" alt="Arquivos">
+      </li>
+      <li>
+        <img src="./insomnia.png" alt="Arquivos">
+      </li>
+      <li>
+        <img src="./terminal.png" alt="Arquivos">
+      </li>
+      <li class="menu">
+        <img src="./menu.png" alt="Arquivos">
+      </li>
+    </ul>
+  </footer>
+  <div class="search">
+    <i data-feather="search"></i>
+    <input type="search" placeholder="Digite para pesquisar">
+  </div>
+  <div class="container"> 
+  </div>
+ 
+  <script src="./main.js"></script>
+  <script>
+    feather.replace()
+  </script>
+</body>
+</html>
