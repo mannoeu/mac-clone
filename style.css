@@ -10,7 +10,7 @@ html, body {
   min-height: 100vh;
   background: rgba(14, 13, 20, 0.849);
   font-family: 'Ubuntu', sans-serif;
-  background: url('./Appearance.png') no-repeat;
+  background: url('./test.png') no-repeat;
   background-size: cover;
   background-position: 50% 35%;
 }
