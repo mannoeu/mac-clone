@@ -1,26 +1,41 @@
-const menuToggle = document.querySelector('.config');
-const popUp = document.querySelector('.pop-up');
-const footer = document.querySelector('footer');
-const docs = document.querySelector('footer ul');
-const clock = document.querySelector('.clock');
+const menuToggle = document.querySelector(".config");
+const popUp = document.querySelector(".pop-up");
+const footer = document.querySelector("footer");
+const docs = document.querySelector("footer ul");
+const clock = document.querySelector(".clock");
 
+const logoButton = document.querySelector(".logo");
+const header = document.querySelector("header ");
+const container = document.querySelector(".container");
+const search = document.querySelector(".search");
+const desktop = document.querySelector(".desktop");
 
-const logoButton = document.querySelector('.logo');
-const header = document.querySelector('header ');
-const container = document.querySelector('.container');
-const search = document.querySelector('.search');
-const desktop = document.querySelector('.desktop');
+const bashPopUp = document.querySelector(".bash");
+const bashOpen = document.querySelector(".bash-open");
+const bashClose = document.querySelector(".bash-close");
 
-function handleOpenSearchOptions(){
-  header.classList.toggle('search-show');
-  container.classList.toggle('search-show');
-  search.classList.toggle('visible');
-  desktop.classList.toggle('hidden');
+function handleOpenTerminal() {
+  bashPopUp.classList.toggle("show");
 }
 
-logoButton.addEventListener('click', () => {
+bashOpen.addEventListener("click", () => {
+  handleOpenTerminal();
+});
+
+bashClose.addEventListener("click", () => {
+  handleOpenTerminal();
+});
+
+function handleOpenSearchOptions() {
+  header.classList.toggle("search-show");
+  container.classList.toggle("search-show");
+  search.classList.toggle("visible");
+  desktop.classList.toggle("hidden");
+}
+
+logoButton.addEventListener("click", () => {
   handleOpenSearchOptions();
-})
+});
 
 const months = [
   "Jan",
@@ -34,10 +49,10 @@ const months = [
   "Set",
   "Out",
   "Nov",
-  "Dez"
+  "Dez",
 ];
 
-function whatTimeIsIt(){
+function whatTimeIsIt() {
   var d = new Date();
   var day = d.getDate();
   var month = months[d.getMonth()];
@@ -49,20 +64,20 @@ function whatTimeIsIt(){
   clock.innerHTML = `${day} de ${month} ${hours}:${minutes}:${seconds}`;
 }
 
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener("DOMContentLoaded", function () {
   window.setInterval(() => {
     whatTimeIsIt();
   }, 1000);
 });
 
-footer.addEventListener('mouseover', ()=>{
+footer.addEventListener("mouseover", () => {
   docs.style.transform = "translateY(0px)";
 });
 
-footer.addEventListener('mouseleave', ()=>{
+footer.addEventListener("mouseleave", () => {
   docs.style.transform = "translateY(60px)";
 });
 
-menuToggle.addEventListener('click', ()=>{
-  popUp.classList.toggle('show');
-})
+menuToggle.addEventListener("click", () => {
+  popUp.classList.toggle("show");
+});

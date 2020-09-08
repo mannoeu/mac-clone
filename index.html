@@ -94,7 +94,7 @@
         <li>
           <img src="./assets/insomnia.png" alt="Arquivos" />
         </li>
-        <li>
+        <li class="bash-open">
           <img src="./assets/terminal.png" alt="Arquivos" />
         </li>
         <li class="menu">
@@ -102,11 +102,26 @@
         </li>
       </ul>
     </footer>
+
+    <!-- Searchbar visible on logo click -->
     <div class="search">
       <i data-feather="search"></i>
       <input type="search" placeholder="Digite para pesquisar" />
     </div>
     <div class="container"></div>
+
+    <!-- Terminal -->
+    <div class="bash">
+      <header>
+        <div class="dots">
+          <span class="bash-close"></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p>guest ─ bash ─ 94x28</p>
+      </header>
+      <textarea autofocus name="textarea" rows="10" cols="50"></textarea>
+    </div>
 
     <script src="./main.js"></script>
     <script>
